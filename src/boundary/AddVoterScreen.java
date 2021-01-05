@@ -31,7 +31,7 @@ import util.E_Gender;
 
 
 /**
- * This class represent the screen used to add a voter's voting time
+ * This class represents the screen used to add a voter's voting time
  * An active member (observer) adds the voting time of a voter
  *
  */
