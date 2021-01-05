@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PercReportByStatus" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="562485d7-8949-4f47-89c8-ab35a6c00eaf">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ElectDayUCA"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT qryPercStatusReport.[City ID], qryPercStatusReport.[City Name], qryPercStatusReport.[Ballot ID], qryPercStatusReport.AllSingle, qryPercStatusReport.AllMarried, qryPercStatusReport.AllDivorced, qryPercStatusReport.AllWidowed, qryPercStatusReport.VotedSingle, qryPercStatusReport.VotedMarried, qryPercStatusReport.VotedDivorced, qryPercStatusReport.VotedWidowed
+FROM qryPercStatusReport]]>
+	</queryString>
+	<field name="City ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="City ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercStatusReport"/>
+	</field>
+	<field name="City Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="City Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercStatusReport"/>
+	</field>
+	<field name="Ballot ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Ballot ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercStatusReport"/>
+	</field>
+	<field name="AllSingle" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="AllSingle"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercStatusReport"/>
+	</field>
+	<field name="AllMarried" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="AllMarried"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercStatusReport"/>
+	</field>
+	<field name="AllDivorced" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="AllDivorced"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercStatusReport"/>
+	</field>
+	<field name="AllWidowed" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="AllWidowed"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercStatusReport"/>
+	</field>
+	<field name="VotedSingle" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="VotedSingle"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercStatusReport"/>
+	</field>
+	<field name="VotedMarried" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="VotedMarried"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercStatusReport"/>
+	</field>
+	<field name="VotedDivorced" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="VotedDivorced"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercStatusReport"/>
+	</field>
+	<field name="VotedWidowed" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="VotedWidowed"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercStatusReport"/>
+	</field>
+	<variable name="AllSingle1" class="java.lang.Long" resetType="Group" resetGroup="City Name" calculation="Sum">
+		<variableExpression><![CDATA[$F{AllSingle}]]></variableExpression>
+	</variable>
+	<variable name="VotedSingle1" class="java.lang.Long" resetType="Group" resetGroup="City Name" calculation="Sum">
+		<variableExpression><![CDATA[$F{VotedSingle}]]></variableExpression>
+	</variable>
+	<variable name="VotedMarried1" class="java.lang.Long" resetType="Group" resetGroup="City Name" calculation="Sum">
+		<variableExpression><![CDATA[$F{VotedMarried}]]></variableExpression>
+	</variable>
+	<variable name="AllMarried1" class="java.lang.Long" resetType="Group" resetGroup="City Name" calculation="Sum">
+		<variableExpression><![CDATA[$F{AllMarried}]]></variableExpression>
+	</variable>
+	<variable name="AllDivorced1" class="java.lang.Long" resetType="Group" resetGroup="City Name" calculation="Sum">
+		<variableExpression><![CDATA[$F{AllDivorced}]]></variableExpression>
+	</variable>
+	<variable name="VotedDivorced1" class="java.lang.Long" resetType="Group" resetGroup="City Name" calculation="Sum">
+		<variableExpression><![CDATA[$F{VotedDivorced}]]></variableExpression>
+	</variable>
+	<variable name="AllWidowed1" class="java.lang.Long" resetType="Group" resetGroup="City Name" calculation="Sum">
+		<variableExpression><![CDATA[$F{AllWidowed}]]></variableExpression>
+	</variable>
+	<variable name="VotedWidowed1" class="java.lang.Long" resetType="Group" resetGroup="City Name" calculation="Sum">
+		<variableExpression><![CDATA[$F{VotedWidowed}]]></variableExpression>
+	</variable>
+	<variable name="AllSingle2" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{AllSingle}]]></variableExpression>
+	</variable>
+	<variable name="VotedSingle2" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{VotedSingle}]]></variableExpression>
+	</variable>
+	<variable name="AllMarried2" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{AllMarried}]]></variableExpression>
+	</variable>
+	<variable name="VotedMarried2" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{VotedMarried}]]></variableExpression>
+	</variable>
+	<variable name="AllDivorced2" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{AllDivorced}]]></variableExpression>
+	</variable>
+	<variable name="VotedDivorced2" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{VotedDivorced}]]></variableExpression>
+	</variable>
+	<variable name="AllWidowed2" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{AllWidowed}]]></variableExpression>
+	</variable>
+	<variable name="VotedWidowed2" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{VotedWidowed}]]></variableExpression>
+	</variable>
+	<group name="City ID">
+		<groupExpression><![CDATA[$F{City ID}]]></groupExpression>
+	</group>
+	<group name="City Name">
+		<groupExpression><![CDATA[$F{City Name}]]></groupExpression>
+		<groupHeader>
+			<band height="60">
+				<staticText>
+					<reportElement x="20" y="30" width="50" height="30" uuid="ec06facc-deb0-43a4-a8e1-5c64ad3dd2a1"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[City:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="70" y="30" width="210" height="30" uuid="b52a5751-4f48-4d01-ba18-1ec9fb3d15b2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{City Name}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="145">
+				<staticText>
+					<reportElement x="20" y="20" width="200" height="30" uuid="fdda2f40-afe4-48f1-a673-c9e8333d29a4"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Total Voting Percentage in City:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="-15" y="60" width="130" height="30" uuid="9b512ef3-5ea1-4ef0-92e7-de5c0d4f7ce4"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Single Voting Percentage]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="135" y="60" width="130" height="30" uuid="0c1b84cd-b375-4613-9398-4dd764260fa3"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Married Voting Percentage]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="285" y="60" width="130" height="30" uuid="aaec2e94-cb04-4b09-8443-1dc11622b429"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Divorced Voting Percentage]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="435" y="60" width="130" height="30" uuid="a45ebebe-9b9e-4700-b617-33919882cdf3"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Widowed Voting Percentage]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="0" y="90" width="100" height="30" uuid="3cfbef11-76a9-48c4-a923-dbc0557817f8"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[100*$V{VotedSingle1}/$V{AllSingle1} + "%"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="150" y="90" width="100" height="30" uuid="19810829-7746-4618-9a5b-f0309a1d4381"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[100*$V{VotedMarried1}/$V{AllMarried1} + "%"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="300" y="90" width="100" height="30" uuid="46ea2290-057e-4b55-9c8b-97dadfa4d603"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[100*$V{VotedDivorced1}/$V{AllDivorced1} + "%"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="450" y="90" width="100" height="30" uuid="6adce799-3d20-4e63-8f43-55a95d167701"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[100*$V{VotedWidowed1}/$V{AllWidowed1} + "%"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="Ballot ID">
+		<groupExpression><![CDATA[$F{Ballot ID}]]></groupExpression>
+		<groupHeader>
+			<band height="82">
+				<staticText>
+					<reportElement x="230" y="10" width="70" height="30" uuid="b1d3485f-6c6c-4bcf-a239-200c8cc1cc18">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="72816e8c-9a3a-4dc4-bf1d-662bdd2d10fc"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="12" isBold="true" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[Ballot ID:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="300" y="10" width="100" height="30" uuid="38867300-912c-4993-9d21-776867972e40"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Californian FB" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Ballot ID}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="-15" y="50" width="130" height="30" uuid="c482119e-49a5-4fb9-a4c9-18db9a72d058"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Single Voting Percentage]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="135" y="50" width="130" height="30" uuid="3f648396-ede7-49f5-9912-311ed73057fa"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Married Voting Percentage]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="285" y="50" width="130" height="30" uuid="9d18db07-ddb3-4c73-b263-3a1b444bc768"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Divorced Voting Percentage]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="435" y="50" width="130" height="30" uuid="92ccd025-d3aa-4cc6-ae08-d98891800bab"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Widowed Voting Percentage]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="0" width="100" height="30" uuid="cef126bd-fda0-42ef-ada8-497b008612c1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="53" y="30" width="448" height="49" uuid="e4cb4d60-2d50-4feb-93b9-f0b79b3e6c07"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="26" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Voting Percentage Report by Status]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="9ffeba4e-bc64-4e5d-93d6-70ec606a80dd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[100*$F{VotedSingle}/$F{AllSingle} + "%"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="0" width="100" height="30" uuid="65366719-309c-4554-b7fd-16853e9b929f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[100*$F{VotedMarried}/$F{AllMarried} + "%"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="30" uuid="6e871f4d-2605-4144-8374-bc06dc80d4a3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[100*$F{VotedDivorced}/$F{AllDivorced} + "%"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="0" width="100" height="30" uuid="2736559a-3924-4c29-b04f-2ccc9cd7c8f9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[100*$F{VotedWidowed}/$F{AllWidowed} + "%"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="227" y="12" width="100" height="30" uuid="d064149d-e541-47d9-9d92-bf2f13c29336"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="132" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="10" width="160" height="30" uuid="95cd3a5b-f09a-4507-8149-232240e4ddc8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total Voting Percentage:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-15" y="50" width="130" height="30" uuid="a5b413eb-5b89-4aee-b28a-68af5cec1fa0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Single Voting Percentage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="50" width="130" height="30" uuid="a75db5ef-98ed-4b86-8ae6-0166c0fc5bda"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Married Voting Percentage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="50" width="130" height="30" uuid="74c65ae1-c06f-403d-bba0-e0231f35e18e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Divorced Voting Percentage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="435" y="50" width="130" height="30" uuid="9f74d6c4-a79b-4fe0-a4c1-69a429787657"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Widowed Voting Percentage]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="80" width="100" height="30" uuid="18f8474b-f8a3-4065-97ad-c237b5010537"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[100*$V{VotedSingle2}/$V{AllSingle2} + "%"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="80" width="100" height="30" uuid="f244c9df-b694-421d-aef1-464447f62dea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[100*$V{VotedMarried2}/$V{AllMarried2} + "%"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="80" width="100" height="30" uuid="b4bfff92-333e-48ec-9062-dd7676130eb4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[100*$V{VotedDivorced2}/$V{AllDivorced2} + "%"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="80" width="100" height="30" uuid="8ae23395-3865-4698-b00e-b85cb83b32c2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[100*$V{VotedWidowed2}/$V{AllWidowed2} + "%"]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

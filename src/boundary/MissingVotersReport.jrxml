@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MissingVotersReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="595efdd8-abb4-4bb4-929d-3fbee8d01592">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ElectDayUCA"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT qryMissingVotersReport.[Voter ID], qryMissingVotersReport.[First Name], qryMissingVotersReport.[Last Name], qryMissingVotersReport.[Phone Num], qryMissingVotersReport.[Supports Party], qryMissingVotersReport.[Ballot ID]
+FROM qryMissingVotersReport]]>
+	</queryString>
+	<field name="Voter ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Voter ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryMissingVotersReport"/>
+	</field>
+	<field name="First Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="First Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryMissingVotersReport"/>
+	</field>
+	<field name="Last Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Last Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryMissingVotersReport"/>
+	</field>
+	<field name="Phone Num" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Phone Num"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryMissingVotersReport"/>
+	</field>
+	<field name="Supports Party" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Supports Party"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryMissingVotersReport"/>
+	</field>
+	<field name="Ballot ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Ballot ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryMissingVotersReport"/>
+	</field>
+	<group name="Ballot ID">
+		<groupExpression><![CDATA[$F{Ballot ID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="0" width="100" height="30" uuid="3cf3aef2-5d8d-489f-bb5b-3fc512c5c782"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="53" y="30" width="448" height="49" uuid="d428f59a-dcef-402f-86f2-47209a8ba8f0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="26" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Missing Voters Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="30" width="70" height="30" uuid="23e4045e-0c1d-48e4-a63e-582004fb43d6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="72816e8c-9a3a-4dc4-bf1d-662bdd2d10fc"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Ballot ID:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="30" width="100" height="30" uuid="c862fe7a-3d42-4290-953f-5013c4edcf03"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Ballot ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-10" y="80" width="100" height="30" uuid="25959c03-3ad7-4d79-929c-91ad7b33da7a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cb5f5199-9526-44ee-b852-a057c3cc58cf"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Voter ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="80" width="100" height="30" uuid="b21f0af4-2f6a-415e-a22f-8f5943de41bf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d7f1bfd0-8051-4bd7-83ed-cb1f38d714af"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[First Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="80" width="100" height="30" uuid="c273a72b-2c60-4f42-8d65-483a1bd1fce8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="774d7f86-fde6-4df9-bf09-ef17228f82b9"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Last Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="80" width="100" height="30" uuid="c69fd83e-2da7-47e1-b878-70ce135f034e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5cfc1d14-c086-4b6b-9fc2-636d0e7e60fe"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Phone Num]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="80" width="100" height="30" uuid="d7540bdc-b452-4504-b047-809f62004b80">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ff5f5823-e444-4af6-ae4e-ddb58d5dfa61"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Supports Party]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="-10" y="0" width="100" height="30" uuid="be82c094-e6c4-4ef6-8404-826eae4e3c0b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cb5f5199-9526-44ee-b852-a057c3cc58cf"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Voter ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="0" width="100" height="30" uuid="3db9bd2c-054d-4b78-b3a7-df4048fbf64b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d7f1bfd0-8051-4bd7-83ed-cb1f38d714af"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{First Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="0" width="100" height="30" uuid="18440e3d-2c3f-403b-9663-ff50566bab61">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="774d7f86-fde6-4df9-bf09-ef17228f82b9"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Last Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="100" height="30" uuid="8498f9a4-a26b-436c-a2b1-0b3dfe2fc45e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5cfc1d14-c086-4b6b-9fc2-636d0e7e60fe"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Phone Num}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="0" width="100" height="30" uuid="785ccde7-7658-4a70-9f07-50735312c79b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ff5f5823-e444-4af6-ae4e-ddb58d5dfa61"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Supports Party}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="227" y="12" width="100" height="30" uuid="4ea85828-3bc5-4b0d-ab76-bf23650ec3f8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

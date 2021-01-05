@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PercReportByGender" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="15ba3e7f-4956-4937-9573-80a4c49b3fed">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ElectDayUCA"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT qryPercGenderReport.[City ID], qryPercGenderReport.[City Name], qryPercGenderReport.[Ballot ID], qryPercGenderReport.AllF, qryPercGenderReport.VotedF, qryPercGenderReport.AllM, qryPercGenderReport.VotedM
+FROM qryPercGenderReport]]>
+	</queryString>
+	<field name="City ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="City ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercGenderReport"/>
+	</field>
+	<field name="City Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="City Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercGenderReport"/>
+	</field>
+	<field name="Ballot ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Ballot ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercGenderReport"/>
+	</field>
+	<field name="AllF" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="AllF"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercGenderReport"/>
+	</field>
+	<field name="VotedF" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="VotedF"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercGenderReport"/>
+	</field>
+	<field name="AllM" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="AllM"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercGenderReport"/>
+	</field>
+	<field name="VotedM" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="VotedM"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qryPercGenderReport"/>
+	</field>
+	<variable name="AllF1" class="java.lang.Long" resetType="Group" resetGroup="City Name" calculation="Sum">
+		<variableExpression><![CDATA[$F{AllF}]]></variableExpression>
+	</variable>
+	<variable name="VotedF1" class="java.lang.Long" resetType="Group" resetGroup="City Name" calculation="Sum">
+		<variableExpression><![CDATA[$F{VotedF}]]></variableExpression>
+	</variable>
+	<variable name="AllM1" class="java.lang.Long" resetType="Group" resetGroup="City Name" calculation="Sum">
+		<variableExpression><![CDATA[$F{AllM}]]></variableExpression>
+	</variable>
+	<variable name="VotedM1" class="java.lang.Long" resetType="Group" resetGroup="City Name" calculation="Sum">
+		<variableExpression><![CDATA[$F{VotedM}]]></variableExpression>
+	</variable>
+	<variable name="AllF2" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{AllF}]]></variableExpression>
+	</variable>
+	<variable name="VotedF2" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{VotedF}]]></variableExpression>
+	</variable>
+	<variable name="AllM2" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{AllM}]]></variableExpression>
+	</variable>
+	<variable name="VotedM2" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{VotedM}]]></variableExpression>
+	</variable>
+	<group name="City ID">
+		<groupExpression><![CDATA[$F{City ID}]]></groupExpression>
+	</group>
+	<group name="City Name">
+		<groupExpression><![CDATA[$F{City Name}]]></groupExpression>
+		<groupHeader>
+			<band height="60">
+				<staticText>
+					<reportElement x="20" y="30" width="50" height="30" uuid="1d24b7cb-ea40-4961-885f-515a6465d0e1"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[City:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="70" y="30" width="210" height="30" uuid="6a2b4aee-5dbe-4094-85ff-b83e29c53fed"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{City Name}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="147">
+				<staticText>
+					<reportElement x="20" y="20" width="200" height="30" uuid="7e464e9d-87ee-4366-ae85-d8366f6f5145"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Total Voting Percentage in City:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="100" y="60" width="160" height="30" uuid="f9ec9788-d7a5-414a-97c2-e331856badbd"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Female Voting Percentage]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="300" y="60" width="160" height="30" uuid="4226c0ae-3ecb-47a0-abff-4002e136e495"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Male Voting Percentage]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="130" y="90" width="100" height="30" uuid="143e1626-c21f-4d62-a2f7-d2745860b1c0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[100*$V{VotedF1}/$V{AllF1} + "%"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="330" y="90" width="100" height="30" uuid="ceec3c26-6063-4a86-90b5-659723cd5208"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[100*$V{VotedM1}/$V{AllM1} + "%"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="Ballot ID">
+		<groupExpression><![CDATA[$F{Ballot ID}]]></groupExpression>
+		<groupHeader>
+			<band height="80">
+				<staticText>
+					<reportElement x="230" y="10" width="70" height="30" uuid="0eac41ae-6226-49f3-9652-04bb8207226a">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="72816e8c-9a3a-4dc4-bf1d-662bdd2d10fc"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="12" isBold="true" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[Ballot ID:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="300" y="10" width="100" height="30" uuid="754038f4-b279-49dc-9906-5ddcce9c3cc0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Californian FB" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Ballot ID}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="100" y="50" width="160" height="30" uuid="5631d4a0-41fc-4086-8da0-f4163bb1e35e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Female Voting Percentage]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="300" y="50" width="160" height="30" uuid="c89698ac-fdc2-4810-9ab4-9f11722226a0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Californian FB" size="11" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Male Voting Percentage]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="89" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="0" width="100" height="30" uuid="081285e5-59b5-46a4-ac9f-bc0410427270"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="53" y="30" width="448" height="49" uuid="24649aa1-b1cc-4f71-ad07-dd293d700da5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="26" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Voting Percentage Report by Gender]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="130" y="0" width="100" height="30" uuid="beed073e-0811-4be1-8df2-3116d28853a5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[100*$F{VotedF}/$F{AllF} + "%"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="100" height="30" uuid="2b77ae1c-55c7-4e93-afc0-53e9e222d6fe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[100*$F{VotedM}/$F{AllM} + "%"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="227" y="12" width="100" height="30" uuid="f5170995-9f5c-4b14-9466-7befbfe764d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="142" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="15" width="160" height="30" uuid="829b4c5d-7cab-4ef9-b337-97c723a4f08f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total Voting Percentage:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="60" width="160" height="30" uuid="c041ca29-2091-4f3f-b552-7739399e7740"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Female Voting Percentage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="60" width="160" height="30" uuid="2d6f6061-6011-4ffb-98cc-63e4f4aa7458"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Male Voting Percentage]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="90" width="100" height="30" uuid="f2218c14-147f-4ccd-b372-f240fe63aeda"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[100*$V{VotedF2}/$V{AllF2} + "%"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="90" width="100" height="30" uuid="e6fabe2a-5c95-4260-9f13-b5ff63533a27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[100*$V{VotedM2}/$V{AllM2} + "%"]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
